@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">Lover</string>
+	<string name="hello">Hello World, MainActivity!</string>
+	<string name="app_name">Lover</string>
+	<string name="heart">Heart</string>
+	<string name="rose">Rose</string>
+	<string name="chocolate">Chocolate</string>
+	<string name="diamond">Diamond</string>
+	<string name="msg_welcome">Touch screen,Give your honey a big surprise!!!
+	</string>
+	<string name="msg_start">Lover Started.</string>
+	<string name="msg_stop">Lover Stopped.</string>
 </resources>
