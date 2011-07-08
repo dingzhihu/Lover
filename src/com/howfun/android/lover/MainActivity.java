@@ -122,11 +122,11 @@ public class MainActivity extends Activity {
    }
 
    private void showExitPrompt() {
-      Toast.makeText(this, R.string.msg_start, Toast.LENGTH_LONG).show();
+      Toast.makeText(this, R.string.msg_stop, Toast.LENGTH_SHORT).show();
    }
 
    private void showResumePrompt() {
-      Toast.makeText(this, R.string.msg_stop, Toast.LENGTH_LONG).show();
+      Toast.makeText(this, R.string.msg_start, Toast.LENGTH_SHORT).show();
    }
 
    @Override

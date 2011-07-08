@@ -9,7 +9,7 @@ public class HeartMask extends Mask{
    public static final int RECT_WIDTH = 72;
    public static final int RECT_HEIGHT = 72;
 
-   private int mHeartIds[] = { R.drawable.menu_heart };
+   private int mHeartIds[] = { R.drawable.heart};
 
    public HeartMask(Context context, int x, int y) {
       super(context);

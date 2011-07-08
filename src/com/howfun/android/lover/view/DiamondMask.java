@@ -4,12 +4,13 @@ import android.content.Context;
 
 import com.howfun.android.lover.R;
 
-public class DiamondMask extends Mask{
+public class DiamondMask extends Mask {
 
-   public static final int RECT_WIDTH = 72;
-   public static final int RECT_HEIGHT = 72;
+   public static final int RECT_WIDTH = 128;
+   public static final int RECT_HEIGHT = 128;
 
-   private int mHeartIds[] = { R.drawable.menu_diamond};
+   private int mHeartIds[] = { R.drawable.diamond0, R.drawable.diamond1,
+         R.drawable.diamond2, R.drawable.diamond3, R.drawable.diamond4 };
 
    public DiamondMask(Context context, int x, int y) {
       super(context);
