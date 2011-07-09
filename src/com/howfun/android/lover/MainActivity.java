@@ -27,7 +27,8 @@ public class MainActivity extends Activity {
    private ScreenManger mScreenManager = null;
    private Sound mSound = null;
 
-   Intent mIntent = null;;
+   Intent mIntentService = null;
+   Intent mIntentReceiver = null;
 
    private int mMaskId = R.id.heart;
 
@@ -47,7 +48,8 @@ public class MainActivity extends Activity {
       mContext = this;
       mSound = new Sound(mContext);
       mScreenManager = new ScreenManger();
-      mIntent = new Intent("com.howfun.android.MusicService");
+      mIntentService = new Intent("com.howfun.android.MusicService");
+      mIntentReceiver = new Intent("com.howfun.android.MusicReceiver");
 
    }
 
@@ -139,7 +141,8 @@ public class MainActivity extends Activity {
       super.onResume();
 
       showResumePrompt();
-      startService(mIntent);
+      sendBroadcast(mIntentReceiver);
+//      startService(mIntentService);
    }
 
    @Override
@@ -147,6 +150,6 @@ public class MainActivity extends Activity {
       super.onPause();
 
       showExitPrompt();
-      stopService(mIntent);
+      stopService(mIntentService);
    }
 }
