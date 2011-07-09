@@ -80,7 +80,8 @@ public class MainActivity extends Activity {
       case R.id.heart:
          mask = new HeartMask(mContext, x, y);
          mScreenManager.addMask(mask);
-         mSound.play(R.raw.heart_beats, false);
+//         mSound.play(R.raw.heart_beats, false);
+         new Sound(mContext).play(R.raw.heart_beats, false);
          break;
       case R.id.rose:
          mask = new RoseMask(mContext, x, y);
