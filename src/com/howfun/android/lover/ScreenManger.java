@@ -11,7 +11,7 @@ public class ScreenManger {
 
    public static final String TAG = "ScreenManager";
 
-   public static final int MAX_STATIC_MASKS = 50;
+   public static final int MAX_STATIC_MASKS = 100;
 
    private ScreenView mScreenView;
 

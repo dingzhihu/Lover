@@ -14,24 +14,23 @@ public class Sound {
       mContext = ctx;
    }
 
-   public void play(int res) {
+   public void play(int res, boolean loop) {
       Utils.log(TAG, "in play,audio res id:" + res);
       mPlayer = MediaPlayer.create(mContext, res);
-      mPlayer.setLooping(false);
+      mPlayer.setLooping(loop);
       mPlayer.start();
       mPlayer.setOnCompletionListener(mCompletionListener);
    }
 
    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
-      
+
       @Override
       public void onCompletion(MediaPlayer mp) {
          Utils.log(TAG, "onCompletion");
          mp.release();
       }
    };
-      
-   
+
    public void stop() {
       if (mPlayer != null) {
          mPlayer.stop();

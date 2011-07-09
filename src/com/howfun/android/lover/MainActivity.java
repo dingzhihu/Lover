@@ -2,6 +2,7 @@ package com.howfun.android.lover;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,15 +20,17 @@ import com.howfun.android.lover.view.Mask;
 import com.howfun.android.lover.view.RoseMask;
 
 public class MainActivity extends Activity {
-   
+
    ScreenView mScreenView = null;
 
    private Context mContext = null;
    private ScreenManger mScreenManager = null;
    private Sound mSound = null;
 
+   Intent mIntent = null;;
+
    private int mMaskId = R.id.heart;
-   
+
    @Override
    public void onCreate(Bundle savedInstanceState) {
       requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -44,6 +47,7 @@ public class MainActivity extends Activity {
       mContext = this;
       mSound = new Sound(mContext);
       mScreenManager = new ScreenManger();
+      mIntent = new Intent("com.howfun.android.MusicService");
 
    }
 
@@ -74,6 +78,7 @@ public class MainActivity extends Activity {
       case R.id.heart:
          mask = new HeartMask(mContext, x, y);
          mScreenManager.addMask(mask);
+         mSound.play(R.raw.heart_beats, false);
          break;
       case R.id.rose:
          mask = new RoseMask(mContext, x, y);
@@ -134,6 +139,7 @@ public class MainActivity extends Activity {
       super.onResume();
 
       showResumePrompt();
+      startService(mIntent);
    }
 
    @Override
@@ -141,5 +147,6 @@ public class MainActivity extends Activity {
       super.onPause();
 
       showExitPrompt();
+      stopService(mIntent);
    }
 }
