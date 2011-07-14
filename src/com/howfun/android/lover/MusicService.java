@@ -10,7 +10,7 @@ public class MusicService extends Service {
 
    private static final String TAG = "MusicService";
 
-   private static final int[] MUSIC_RES = { R.raw.music0, R.raw.music1 };
+   private static final int[] MUSIC_RES = { R.raw.music0};
 
    private static final Random RNG = new Random();
    Sound mSound = null;

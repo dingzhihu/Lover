@@ -1,8 +1,11 @@
 package com.howfun.android.lover;
 
+import net.youmi.android.AdManager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,6 +23,12 @@ import com.howfun.android.lover.view.Mask;
 import com.howfun.android.lover.view.RoseMask;
 
 public class MainActivity extends Activity {
+   
+   static{
+      String id = "5ed7e04ad1f5c9e5";
+      String pwd = "f5226bce623fb33a";
+      AdManager.init(id, pwd, 31, false, 1.0);
+   }
 
    ScreenView mScreenView = null;
 
@@ -80,7 +89,7 @@ public class MainActivity extends Activity {
       case R.id.heart:
          mask = new HeartMask(mContext, x, y);
          mScreenManager.addMask(mask);
-         mSound.play(R.raw.heart_beats, false);
+//         mSound.play(R.raw.heart_beats, false);
          break;
       case R.id.rose:
          mask = new RoseMask(mContext, x, y);
@@ -151,5 +160,11 @@ public class MainActivity extends Activity {
 
       showExitPrompt();
       stopService(mIntentService);
+   }
+   
+   @Override
+   public void onConfigurationChanged(Configuration config) {
+      super.onConfigurationChanged(config);
+      setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
    }
 }

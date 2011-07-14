@@ -2,11 +2,11 @@
 <resources>
 	<string name="hello">Hello World, MainActivity!</string>
 	<string name="app_name">亲密爱人</string>
-	<string name="heart">爱心</string>
+	<string name="heart">爱你之心</string>
 	<string name="rose">玫瑰花</string>
 	<string name="chocolate">巧克力</string>
 	<string name="diamond">钻石</string>
-	<string name="msg_welcome">轻点屏幕，给TA一个惊喜吧~
+	<string name="msg_welcome">轻点屏幕，给她一个惊喜吧~(Menu里还有更多哦)
 	</string>
 	<string name="msg_start">亲密爱人开始喽</string>
 	<string name="msg_stop">亲密爱人退出</string>
