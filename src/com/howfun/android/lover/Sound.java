@@ -2,6 +2,7 @@ package com.howfun.android.lover;
 
 import android.content.Context;
 import android.media.MediaPlayer;
+import android.util.Log;
 
 public class Sound {
 
@@ -26,8 +27,8 @@ public class Sound {
 
       @Override
       public void onCompletion(MediaPlayer mp) {
-         Utils.log(TAG, "onCompletion");
-         mp.release();
+         Log.e(TAG, "onCompletion==========================");
+         stop();
       }
    };
 

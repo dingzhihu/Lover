@@ -7,7 +7,7 @@ import android.util.Log;
 public final class Utils {
 
    public static void log(String tag, String info) {
-      Log.e("Lover >>>>>>>>>" + tag, "-------->" + info);
+      Log.d("Lover >>>>>>>>>" + tag, "-------->" + info);
    }
 
    public static void showMessageDlg(Context context, int stringId) {
