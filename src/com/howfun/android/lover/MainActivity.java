@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
    static{
       String id = "5ed7e04ad1f5c9e5";
       String pwd = "f5226bce623fb33a";
-      AdManager.init(id, pwd, 31, false, 1.0);
+//      AdManager.init(id, pwd, 31, false, 1.0);
    }
 
    ScreenView mScreenView = null;
