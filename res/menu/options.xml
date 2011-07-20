@@ -9,4 +9,9 @@
 		android:icon="@drawable/menu_chocolate" />
 	<item android:id="@+id/diamond" android:title="@string/diamond"
 		android:icon="@drawable/menu_diamond" />
+	<item android:id="@+id/about" android:icon="@drawable/about"
+		android:title="@string/about" />
+
+	<item android:id="@+id/exit" android:icon="@drawable/exit"
+		android:title="@string/exit" />
 </menu>

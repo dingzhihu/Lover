@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+   <string name="howfun">好风工作室 (2011)</string>
 	<string name="hello">Hello World, MainActivity!</string>
 	<string name="app_name">亲密爱人</string>
 	<string name="heart">爱你之心</string>
@@ -10,4 +11,6 @@
 	</string>
 	<string name="msg_start">亲密爱人开始喽</string>
 	<string name="msg_stop">亲密爱人退出</string>
+   <string name="about">关于</string>
+	<string name="exit">退出</string>
 </resources>
