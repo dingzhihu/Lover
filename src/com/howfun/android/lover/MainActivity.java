@@ -23,11 +23,11 @@ import com.howfun.android.lover.view.RoseMask;
 import com.sosceo.android.ads.AdView;
 
 public class MainActivity extends Activity {
-   
-   static{
+
+   static {
       String id = "5ed7e04ad1f5c9e5";
       String pwd = "f5226bce623fb33a";
-//      AdManager.init(id, pwd, 31, false, 1.0);
+      // AdManager.init(id, pwd, 31, false, 1.0);
    }
 
    ScreenView mScreenView = null;
@@ -59,8 +59,8 @@ public class MainActivity extends Activity {
       mScreenManager = new ScreenManger();
       mIntentService = new Intent("com.howfun.android.MusicService");
       mIntentReceiver = new Intent("com.howfun.android.MusicReceiver");
-      
-      sosceo();
+
+         sosceo();
 
    }
 
@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
       case R.id.heart:
          mask = new HeartMask(mContext, x, y);
          mScreenManager.addMask(mask);
-//         mSound.play(R.raw.heart_beats, false);
+         // mSound.play(R.raw.heart_beats, false);
          break;
       case R.id.rose:
          mask = new RoseMask(mContext, x, y);
@@ -160,7 +160,7 @@ public class MainActivity extends Activity {
 
       showResumePrompt();
       sendBroadcast(mIntentReceiver);
-//      startService(mIntentService);
+      // startService(mIntentService);
    }
 
    @Override
@@ -170,15 +170,20 @@ public class MainActivity extends Activity {
       showExitPrompt();
       stopService(mIntentService);
    }
-   
+
    @Override
    public void onConfigurationChanged(Configuration config) {
       super.onConfigurationChanged(config);
       setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
    }
+
    private void sosceo() {
-      AdView mAdView = (AdView) findViewById(R.id.ad);
-      mAdView.showAgreement();
- 
+      AdView adView = (AdView) findViewById(R.id.ad);
+      if (LoverApplication.AD_MODE) {
+         adView.showAgreement();
+      } else {
+         adView.setVisibility(View.INVISIBLE);
+      }
+
    }
 }
