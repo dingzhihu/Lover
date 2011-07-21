@@ -2,6 +2,7 @@
 <resources>
 	<string name="hello">Hello World, MainActivity!</string>
 	<string name="app_name">Lover</string>
+    <string name="version">1.0.0</string>
 	<string name="heart">Heart</string>
 	<string name="rose">Rose</string>
 	<string name="chocolate">Chocolate</string>
@@ -10,4 +11,10 @@
 	</string>
 	<string name="msg_start">Lover Started.</string>
 	<string name="msg_stop">Lover Stopped.</string>
+	
+   <string name="howfun">HOWFUN Studio (2011)</string>
+	<string name="fruit_mask">Fruits</string>
+
+   <string name="about">About</string>
+	<string name="exit">Exit</string>
 </resources>

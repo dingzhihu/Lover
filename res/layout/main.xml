@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:umadsdk="http://schemas.android.com/apk/res/com.howfun.android.lover"
 	android:orientation="vertical" android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
-	<net.youmi.android.AdView android:id="@+id/adView"
-		android:layout_width="fill_parent" android:layout_height="wrap_content"
-		umadsdk:textColor="#ffffff" umadsdk:backgroundTransparent="155"
-		umadsdk:backgroundColor="#808080" />
 	<com.howfun.android.lover.ScreenView
 		android:id="@+id/screen_view" android:layout_width="fill_parent"
 		android:layout_height="fill_parent" />
 
-</LinearLayout>
+   <com.sosceo.android.ads.AdView
+      android:id="@+id/ad" android:layout_width="fill_parent"
+      android:textColor="#FFFFFF" 
+      android:background="@android:color/transparent"
+      android:layout_height="50px" />
+</FrameLayout>

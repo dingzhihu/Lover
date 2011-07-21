@@ -1,6 +1,5 @@
 package com.howfun.android.lover;
 
-import net.youmi.android.AdManager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -21,13 +20,14 @@ import com.howfun.android.lover.view.DiamondMask;
 import com.howfun.android.lover.view.HeartMask;
 import com.howfun.android.lover.view.Mask;
 import com.howfun.android.lover.view.RoseMask;
+import com.sosceo.android.ads.AdView;
 
 public class MainActivity extends Activity {
    
    static{
       String id = "5ed7e04ad1f5c9e5";
       String pwd = "f5226bce623fb33a";
-      AdManager.init(id, pwd, 31, false, 1.0);
+//      AdManager.init(id, pwd, 31, false, 1.0);
    }
 
    ScreenView mScreenView = null;
@@ -59,6 +59,8 @@ public class MainActivity extends Activity {
       mScreenManager = new ScreenManger();
       mIntentService = new Intent("com.howfun.android.MusicService");
       mIntentReceiver = new Intent("com.howfun.android.MusicReceiver");
+      
+      sosceo();
 
    }
 
@@ -133,6 +135,13 @@ public class MainActivity extends Activity {
          mScreenManager.clear();
          mMaskId = R.id.diamond;
          break;
+      case R.id.about:
+         Utils.showAbout(MainActivity.this);
+         break;
+      case R.id.exit:
+         showExitPrompt();
+         this.finish();
+         break;
       }
       return true;
    }
@@ -166,5 +175,10 @@ public class MainActivity extends Activity {
    public void onConfigurationChanged(Configuration config) {
       super.onConfigurationChanged(config);
       setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+   }
+   private void sosceo() {
+      AdView mAdView = (AdView) findViewById(R.id.ad);
+      mAdView.showAgreement();
+ 
    }
 }
